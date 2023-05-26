@@ -27,13 +27,13 @@ class Counter {
   Counter() : counter_(0) {}
 
   // Returns the current counter value, and increments it.
-  int Increment();
+  int Increment() override;
 
   // Returns the current counter value, and decrements it.
-  int Decrement();
+  int Decrement() override;
 
   // Prints the current counter value to STDOUT.
-  void Print() const;
+  void Print() override const;
 };
 
 // Test cases
