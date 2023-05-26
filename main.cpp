@@ -69,6 +69,15 @@ TEST_F(AddTest, ReverseOrder) {
   EXPECT_EQ(add(-4, -3), -7);
   EXPECT_EQ(add(20, -10), 10);
 }
+// Testing the Increment() method
+TEST(Counter, Increment) {
+  Counter c;
+  EXPECT_EQ(0, c.Decrement());
+  EXPECT_EQ(0, c.Increment());
+  EXPECT_EQ(1, c.Increment());
+  EXPECT_EQ(2, c.Increment());
+  EXPECT_EQ(3, c.Decrement());
+}
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
