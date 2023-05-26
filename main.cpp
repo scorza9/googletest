@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <climits>
-
+#include <googletest/samples/sample4.h>
 // Sample function to test1
 int add(int a, int b) {
   return a + b;
