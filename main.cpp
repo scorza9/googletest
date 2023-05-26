@@ -88,7 +88,7 @@ TEST_F(AddTest, ReverseOrder) {
   EXPECT_EQ(add(20, -10), 10);
 }
 // Testing the Increment() method
-TEST(Counter, Increment) {
+TEST_F(Counter, Increment) {
   Counter c;
   EXPECT_EQ(0, c.Decrement());
   EXPECT_EQ(0, c.Increment());
