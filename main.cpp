@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <climits>
-#include "googletest/samples/sample4.h"
+
 // Sample function to test1
 int add(int a, int b) {
   return a + b;
@@ -16,6 +16,24 @@ class AddTest : public ::testing::Test {
   void TearDown() override {
     // Add any teardown code if needed
   }
+};
+
+class Counter {
+ private:
+  int counter_;
+
+ public:
+  // Creates a counter that starts at 0.
+  Counter() : counter_(0) {}
+
+  // Returns the current counter value, and increments it.
+  int Increment();
+
+  // Returns the current counter value, and decrements it.
+  int Decrement();
+
+  // Prints the current counter value to STDOUT.
+  void Print() const;
 };
 
 // Test cases
@@ -70,7 +88,7 @@ TEST_F(AddTest, ReverseOrder) {
   EXPECT_EQ(add(20, -10), 10);
 }
 // Testing the Increment() method
-TEST_F(Counter, Increment) {
+TEST(Counter, Increment) {
   Counter c;
   EXPECT_EQ(0, c.Decrement());
   EXPECT_EQ(0, c.Increment());
