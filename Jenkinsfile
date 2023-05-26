@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        checkout([$class: 'GitSCM', branches: [[name: '*/test']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Def', url: 'https://github.com/Scorza9/googletest']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Def', url: 'https://github.com/Scorza9/googletest']]])
       }
     }
 
@@ -21,7 +21,7 @@ pipeline {
     stage('Test') {
       steps {
         dir(path: BUILD_DIR) {
-          sh './test'
+          sh './main'
         }
 
       }
