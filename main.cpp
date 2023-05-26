@@ -18,23 +18,7 @@ class AddTest : public ::testing::Test {
   }
 };
 
-class Counter {
- private:
-  int counter_;
 
- public:
-  // Creates a counter that starts at 0.
-  Counter() : counter_(0) {}
-
-  // Returns the current counter value, and increments it.
-  int Increment() override;
-
-  // Returns the current counter value, and decrements it.
-  int Decrement() override;
-
-  // Prints the current counter value to STDOUT.
-  void Print() override const;
-};
 
 // Test cases
 // Testing addition of positive numbers
@@ -88,14 +72,14 @@ TEST_F(AddTest, ReverseOrder) {
   EXPECT_EQ(add(20, -10), 10);
 }
 // Testing the Increment() method
-TEST_F(Counter, Increment) {
-  Counter c;
-  EXPECT_EQ(0, c.Decrement());
-  EXPECT_EQ(0, c.Increment());
-  EXPECT_EQ(1, c.Increment());
-  EXPECT_EQ(2, c.Increment());
-  EXPECT_EQ(3, c.Decrement());
-}
+// TEST_F(Counter, Increment) {
+//  Counter c;
+//  EXPECT_EQ(0, c.Decrement());
+//  EXPECT_EQ(0, c.Increment());
+//  EXPECT_EQ(1, c.Increment());
+//  EXPECT_EQ(2, c.Increment());
+//  EXPECT_EQ(3, c.Decrement());
+// }
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
