@@ -1,9 +1,12 @@
 #include <gtest/gtest.h>
 #include <climits>
 
-// Sample function to test1
 int add(int a, int b) {
   return a + b;
+}
+
+bool IsEven(int number) {
+    return (number % 2) == 0;
 }
 
 // Test class
@@ -71,6 +74,29 @@ TEST_F(AddTest, ReverseOrder) {
   EXPECT_EQ(add(-4, -3), -7);
   EXPECT_EQ(add(20, -10), 10);
 }
+
+TEST(IsEvenTest, PositiveNumbers) {
+    EXPECT_TRUE(IsEven(2));
+    EXPECT_TRUE(IsEven(10));
+    EXPECT_TRUE(IsEven(100));
+}
+
+TEST(IsEvenTest, NegativeNumbers) {
+    EXPECT_TRUE(IsEven(-2));
+    EXPECT_TRUE(IsEven(-10));
+    EXPECT_TRUE(IsEven(-100));
+}
+
+TEST(IsEvenTest, Zero) {
+    EXPECT_TRUE(IsEven(0));
+}
+
+TEST(IsEvenTest, OddNumbers) {
+    EXPECT_FALSE(IsEven(1));
+    EXPECT_FALSE(IsEven(3));
+    EXPECT_FALSE(IsEven(11));
+}
+
 // Testing the Increment() method
 // TEST_F(Counter, Increment) {
 //  Counter c;
