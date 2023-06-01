@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include <climits>
 
+
 int add(int a, int b) {
   return a + b;
 }
@@ -96,16 +97,6 @@ TEST(IsEvenTest, OddNumbers) {
     EXPECT_FALSE(IsEven(3));
     EXPECT_FALSE(IsEven(11));
 }
-
-// Testing the Increment() method
-// TEST_F(Counter, Increment) {
-//  Counter c;
-//  EXPECT_EQ(0, c.Decrement());
-//  EXPECT_EQ(0, c.Increment());
-//  EXPECT_EQ(1, c.Increment());
-//  EXPECT_EQ(2, c.Increment());
-//  EXPECT_EQ(3, c.Decrement());
-// }
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
