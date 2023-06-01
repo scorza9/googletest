@@ -65,32 +65,32 @@ protected:
 // Test cases
 // Testing addition of positive numbers
 TEST_F(AddTest, PositiveNumbers) {
-  EXPECT_EQ(add(3, 4), 7);
-  EXPECT_EQ(add(10, 20), 30);
+  EXPECT_EQ(add(56,73), 129);
+  EXPECT_EQ(add(12, 8),20 );
 }
 
 // Testing addition of negative numbers
 TEST_F(AddTest, NegativeNumbers) {
-  EXPECT_EQ(add(-3, -4), -7);
-  EXPECT_EQ(add(-10, -20), -30);
+  EXPECT_EQ(add(-2, -7), -9);
+  EXPECT_EQ(add(-15, -40), -55);
 }
 
 // Testing addition of mixed (positive and negative) numbers
 TEST_F(AddTest, MixedNumbers) {
-  EXPECT_EQ(add(3, -4), -1);
-  EXPECT_EQ(add(-10, 20), 10);
+  EXPECT_EQ(add(7, -5), -2);
+  EXPECT_EQ(add(-15, 32), 17);
 }
 
 // Testing addition with zero
 TEST_F(AddTest, Zero) {
-  EXPECT_EQ(add(0, 5), 5);
-  EXPECT_EQ(add(-5, 0), -5);
+  EXPECT_EQ(add(0, 7), 7);
+  EXPECT_EQ(add(-14, 0), -14);
 }
 
 // Testing addition with the same number
 TEST_F(AddTest, SameNumber) {
-  EXPECT_EQ(add(5, 5), 10);
-  EXPECT_EQ(add(-5, -5), -10);
+  EXPECT_EQ(add(16, 16), 32);
+  EXPECT_EQ(add(-15, -15), -30);
 }
 
 // Testing addition with min and max integer values
@@ -115,14 +115,14 @@ TEST_F(AddTest, ReverseOrder) {
 }
 
 TEST(IsEvenTest, PositiveNumbers) {
-    EXPECT_TRUE(IsEven(2));
-    EXPECT_TRUE(IsEven(10));
+    EXPECT_TRUE(IsEven(4));
+    EXPECT_TRUE(IsEven(44));
     EXPECT_TRUE(IsEven(100));
 }
 
 TEST(IsEvenTest, NegativeNumbers) {
-    EXPECT_TRUE(IsEven(-2));
-    EXPECT_TRUE(IsEven(-10));
+    EXPECT_TRUE(IsEven(-6));
+    EXPECT_TRUE(IsEven(-40));
     EXPECT_TRUE(IsEven(-100));
 }
 
@@ -131,19 +131,19 @@ TEST(IsEvenTest, Zero) {
 }
 
 TEST(IsEvenTest, OddNumbers) {
-    EXPECT_FALSE(IsEven(1));
-    EXPECT_FALSE(IsEven(3));
-    EXPECT_FALSE(IsEven(11));
+    EXPECT_FALSE(IsEven(7));
+    EXPECT_FALSE(IsEven(15));
+    EXPECT_FALSE(IsEven(31));
 }
 
 TEST_F(MyStringTest, Length) {
-    MyString str("Hello, World!");
-    EXPECT_EQ(str.Length(), 13);
+    MyString str("Software Engineering for HPC");
+    EXPECT_EQ(str.Length(), 28);
 }
 
 TEST_F(MyStringTest, GetString) {
-    MyString str("Hello, World!");
-    EXPECT_STREQ(str.GetString(), "Hello, World!");
+    MyString str("SWENG!");
+    EXPECT_STREQ(str.GetString(), "SWENG!");
 }
 
 int main(int argc, char **argv) {
