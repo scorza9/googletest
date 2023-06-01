@@ -23,6 +23,44 @@ class AddTest : public ::testing::Test {
 };
 
 
+// MyString class
+class MyString {
+private:
+    char* buffer_;
+    int size_;
+
+public:
+    explicit MyString(const char* str) {
+        size_ = strlen(str);
+        buffer_ = new char[size_ + 1];
+        strcpy(buffer_, str);
+    }
+
+    ~MyString() {
+        delete[] buffer_;
+    }
+
+    int Length() const {
+        return size_;
+    }
+
+    const char* GetString() const {
+        return buffer_;
+    }
+};
+
+// Test fixture
+class MyStringTest : public ::testing::Test {
+protected:
+    void SetUp() override {
+        // Any setup steps you need to perform before each test
+    }
+
+    void TearDown() override {
+        // Any teardown steps you need to perform after each test
+    }
+};
+
 
 // Test cases
 // Testing addition of positive numbers
@@ -96,6 +134,16 @@ TEST(IsEvenTest, OddNumbers) {
     EXPECT_FALSE(IsEven(1));
     EXPECT_FALSE(IsEven(3));
     EXPECT_FALSE(IsEven(11));
+}
+
+TEST_F(MyStringTest, Length) {
+    MyString str("Hello, World!");
+    EXPECT_EQ(str.Length(), 13);
+}
+
+TEST_F(MyStringTest, GetString) {
+    MyString str("Hello, World!");
+    EXPECT_STREQ(str.GetString(), "Hello, World!");
 }
 
 int main(int argc, char **argv) {
