@@ -3,7 +3,7 @@
 
 
 int add(int a, int b) {
-  return a + c;
+  return a + b;
 }
 
 bool IsEven(int number) {
