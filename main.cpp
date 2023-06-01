@@ -80,7 +80,7 @@ TEST_F(AddTest, NegativeNumbers) {
 
 // Testing addition of mixed (positive and negative) numbers
 TEST_F(AddTest, MixedNumbers) {
-  EXPECT_EQ(add(7, -5), -2);
+  EXPECT_EQ(add(7, -5), 2);
   EXPECT_EQ(add(-15, 32), 17);
 }
 
