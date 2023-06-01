@@ -62,7 +62,10 @@ protected:
 };
 
 
-// Test cases
+// Test cases :
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
 // Testing addition of positive numbers
 TEST_F(AddTest, PositiveNumbers) {
   EXPECT_EQ(add(56,73), 129);
@@ -114,33 +117,39 @@ TEST_F(AddTest, ReverseOrder) {
   EXPECT_EQ(add(20, -10), 10);
 }
 
+// Testing if positive numbers are even
 TEST(IsEvenTest, PositiveNumbers) {
     EXPECT_TRUE(IsEven(4));
     EXPECT_TRUE(IsEven(44));
     EXPECT_TRUE(IsEven(100));
 }
 
+// Testing if negative numbers are even
 TEST(IsEvenTest, NegativeNumbers) {
     EXPECT_TRUE(IsEven(-6));
     EXPECT_TRUE(IsEven(-40));
     EXPECT_TRUE(IsEven(-100));
 }
 
+// Testing if the number zero is even
 TEST(IsEvenTest, Zero) {
     EXPECT_TRUE(IsEven(0));
 }
 
+// Testing if positive numbers are odd
 TEST(IsEvenTest, OddNumbers) {
     EXPECT_FALSE(IsEven(7));
     EXPECT_FALSE(IsEven(15));
     EXPECT_FALSE(IsEven(31));
 }
 
+// Checking for the length of the string
 TEST_F(MyStringTest, Length) {
     MyString str("Software Engineering for HPC");
     EXPECT_EQ(str.Length(), 28);
 }
 
+// Checking for the equality strings
 TEST_F(MyStringTest, GetString) {
     MyString str("SWENG!");
     EXPECT_STREQ(str.GetString(), "SWENG!");
