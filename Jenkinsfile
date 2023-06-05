@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('Initialize') {
+    	steps {
+      }
+    }    
+    
     stage('Connection') {
       steps {
         checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Def', url: 'https://github.com/Scorza9/googletest']]])
