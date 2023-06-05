@@ -4,7 +4,7 @@
 int add(int a, int b) {
   return a + b;
 }
-
+//this is a comment
 bool IsEven(int number) {
     return (number % 2) == 0;
 }
@@ -158,4 +158,4 @@ int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
-#this is a comment
+
