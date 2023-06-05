@@ -1,7 +1,8 @@
 #include <gtest/gtest.h>
 #include <climits>
 
-
+int c;
+c = 8;
 int add(int a, int b) {
   return a + b;
 }
